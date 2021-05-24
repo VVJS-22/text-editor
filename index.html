@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <title>Text Editor</title>
+ 
+ <link rel="stylesheet" href="style.css">
+ 
+ <script src="script.js"></script>
+ <script src="https://kit.fontawesome.com/cb137b9af1.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+ 
+ <main>
+  
+  <header>
+   <h1>TextEditor</h1>
+  </header>
+  
+  <toolbar>
+   
+   <div class="button">
+    <button id="bold" type="button" onclick="makeBold()">Bold</button>
+    
+    <button id="italic" type="button" onclick="makeItalic()">Italic</button>
+    
+    <button id="underline" type="button" onclick="makeUnderline()">Underline</button>
+    
+    <button class="align-light" id="left-align" type="button" onclick="alignText('left')"><i class="fas fa-align-left"></i></button>
+    
+    <button class="align-light" onclick="alignText('center')" id="center-align" type="button"><i class="fas fa-align-center" ></i></button>
+    
+    <button class="align-light" id="right-align" type="button" onclick="alignText('right')"><i class="fas fa-align-right"></i></button>
+   </div>
+
+  </toolbar>
+  <hr />
+
+  <editor>
+   
+   <div class="col">
+    <div class="form-group">
+     <label for="text-input">Your Document Text</label><br>
+     <textarea id="text-input" oninput=updateText() rows="3"></textarea>
+    </div>
+   </div>
+
+   <div class="col">
+    <label for="text-output">Formated Text</label>
+    <div id="text-output">
+    </div>
+   </div>
+  </editor>
+ <hr>
+ </main>
+
+</body>
+
+</html>
